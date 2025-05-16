@@ -1,0 +1,121 @@
+:host{
+    display: block;
+    padding: 20px 12px;
+    background: var(--dark-color);
+    position: relative;
+}
+
+.main-menu-list{
+    display: grid;
+    padding: 0;
+    grid-gap: 8px;
+    list-style: none;
+}
+
+.menu-item{
+    grid-gap: 12px;
+    border: none;
+    background: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 16px 1fr max-content;
+    transition: background-color 0.15s ease;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 16px 12px;
+    cursor: pointer;
+    align-items: center;
+    text-align: left;
+    border-radius: 2px;
+    &:hover,
+    &:focus-visible{
+    background-color: var(--dark-hover-color);
+    svg{
+        color: var(--primary-color);
+    }
+    span{
+        color: var(--primary-color);
+    }
+    }
+    svg{
+        color: var(--light-color);
+        transition: color 0.15s ease;
+        width: 16px;
+        height: 16px;
+    }
+    span{
+        color: var(--light-color);
+        transition: color 0.15s ease;
+    }
+}
+
+.to-subscribers{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    &:hover,
+    &:focus-visible{
+        .to-subscribers-link{
+            color: var(--primary-color);
+        }
+        .to-subscribers-icon{
+            color: var(--primary-color);
+        }
+    }
+}
+
+.to-subscribers-link{
+    color: var(--light-color);
+    text-decoration: none;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.to-subscribers-icon{
+    color: var(--light-color);
+    width: 14px;
+    height: 14px;
+    transition: color 0.15s ease;
+}
+
+.sidebar__footer{
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 20px;
+    border-radius: 2px;
+    padding: 4px 16px;
+    display: grid;
+    grid-template-columns: 32px 1fr 16px;
+    transition: background-color 0.15s ease;
+    align-items: center;
+    grid-gap: 12px;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible{
+        background-color: var(--dark-hover-color);
+        .username-text{
+            color: var(--primary-color);
+        }
+        svg{
+            color: var(--primary-color);
+        }
+    }
+    img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .username-text{
+        font-weight: 700;
+        color: var(--light-color);
+        transition: color 0.15s ease;
+    }
+    svg{
+        color: var(--light-color);
+        width: 13px;
+        height: 13px;
+        transition: color 0.15s ease;
+    }
+}

@@ -4,7 +4,7 @@
     --dark-color: #000000;
     --primary-color: #ae7fff;
     --grey-color: #5F646D;
-    --light-hover-color: #161616;
+    --dark-hover-color: #161616;
 }
 
 *,
@@ -19,6 +19,7 @@ body{
     color: var(--light-color);
     background-image: url(/assets/imgs/background.jpg);
     background-size: cover;
+    height: 100dvh;
 }
 
 .h6{
@@ -103,4 +104,10 @@ body{
         right: -4px;
         z-index: -1;
     }
+}
+
+.medium-text{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
 }
