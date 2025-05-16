@@ -3,13 +3,13 @@ import { SvgIconComponent } from "../svg-icon/svg-icon.component";
 import { AsyncPipe, NgFor } from '@angular/common';
 import { ProfileService } from '../../data/service/profile.service';
 import { SubscriberCardComponent } from "./subscriber-card/subscriber-card.component";
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { ImgUrlPipe } from '../../helpers/pipes/img-url.pipe';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SvgIconComponent, NgFor, AsyncPipe, SubscriberCardComponent, RouterLink, ImgUrlPipe],
+  imports: [SvgIconComponent, NgFor, AsyncPipe, SubscriberCardComponent, RouterLink, ImgUrlPipe, RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -17,7 +17,7 @@ export class SidebarComponent {
 menuItems = [{
   label: 'Моя страница',
   icon: 'home',
-  link: ''
+  link: 'profile/me'
 },
 {
   label: 'Чаты',

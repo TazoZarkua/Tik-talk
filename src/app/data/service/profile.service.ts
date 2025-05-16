@@ -28,4 +28,10 @@ export class ProfileService {
   getAccount(id:string){
     return this.http.get<Profile>(`${this.baseApiUrl}${id}`)
   }
+
+  patchProfile(profile: Partial<Profile>){
+   return this.http.patch<Profile>(`${this.baseApiUrl}me`,{
+    profile
+   })
+  }
 }

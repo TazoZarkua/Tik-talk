@@ -1,1 +1,46 @@
-<p>settings-page works!</p>
+<div class="profile-section">
+    @if (me(); as me) {
+    @if (me.avatarUrl) {
+    <img [src]="me.avatarUrl | imgUrl" alt="avatar">
+    } @else {
+    <img src="/assets/imgs/king.jpg" alt="avatar">
+    }
+    <div class="username-and-name">
+        <h1 class="h4 mb4">{{me.firstName}} {{me.lastName}}</h1>
+        <span class="regular">{{me.username}}</span>
+    </div>
+    }
+</div>
+
+<form class="profile-form__wrapper" [formGroup]="form">
+    <div class="profile-form">
+    <div class="two-columns">
+        <label class="tt-form-label">
+            <span class="tt-form-label__text">Имя</span>
+            <input type="text" class="tt-form-input" formControlName="firstName">
+        </label>
+
+        <label class="tt-form-label">
+            <span class="tt-form-label__text">Фамилия</span>
+            <input type="text" class="tt-form-input" formControlName="lastName">
+        </label>
+    </div>
+    <label class="tt-form-label">
+        <span class="tt-form-label__text">Telegram Username</span>
+        <input type="text" class="tt-form-input" formControlName="userName">
+    </label>
+    <label class="tt-form-label">
+        <span class="tt-form-label__text">О себе</span>
+        <textarea formControlName="description" class="tt-form-input tt-textarea" rows="4"></textarea>
+    </label>
+    <label class="tt-form-label">
+        <span class="tt-form-label__text">Навыки (стэк)</span>
+        <input type="text" class="tt-form-input" formControlName="userName">
+    </label>
+    </div>
+    <div>
+        <div>
+            <button class="btn" (click)="onSave()">Сохранить</button>
+        </div>
+    </div>
+</form>

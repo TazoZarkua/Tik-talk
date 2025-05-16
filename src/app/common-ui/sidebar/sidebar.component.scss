@@ -13,6 +13,7 @@
 }
 
 .menu-item{
+    text-decoration: none;
     grid-gap: 12px;
     border: none;
     background: none;
@@ -28,6 +29,7 @@
     align-items: center;
     text-align: left;
     border-radius: 2px;
+    &.active,
     &:hover,
     &:focus-visible{
     background-color: var(--dark-hover-color);
