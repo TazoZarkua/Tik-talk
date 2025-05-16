@@ -1,0 +1,59 @@
+:root{
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --primary-color: #ae7fff;
+    --grey-color: #5F646D;
+    --light-hover-color: #161616;
+}
+
+*,
+*:before,
+*:after{
+     font-family: "JetBrains Mono", monospace;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    color: var(--light-color);
+    background-image: url(/assets/imgs/background.jpg);
+    background-size: cover;
+}
+
+.h6{
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.subtitle{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.skill-tag{
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline;
+}
+
+.btn{
+    background: var(--primary-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    &:hover,
+    &:focus-visible{
+        background-color: #a06dfa;
+    }
+}
