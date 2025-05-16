@@ -1,1 +1,24 @@
-<p>login-page works!</p>
+<form class="login-form">
+    <h1 class="h1 mb60">Вход</h1>
+    <label class="tt-control-label mb16">
+        Telegram username
+        <span class="login-input">
+        <input type="text" placeholder="Введите логин" class="tt-input">
+        <button class="login-btn">
+            <svg icon="login"></svg>
+        </button>
+        </span>
+    </label>
+    <label class="tt-control-label mb32">
+         Password
+         <span class="password-input">
+        <input [type]="isPasswordVisible() ? 'text' : 'password'" placeholder="Введите пароль" class="tt-input">
+        <button class="password-btn" (click)="isPasswordVisible.set(!isPasswordVisible())" [style.color]="isPasswordVisible() ? '#ae7fff' : '#ffffffbf'" type="button">
+            <svg icon="eye"></svg>
+        </button>
+        </span>
+    </label>
+    <button class="btn btn-shadow" id="btn">Войти</button>
+</form>
+
+<img src="/assets/svg/logo-big.svg" alt="logo">

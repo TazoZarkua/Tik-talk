@@ -1,0 +1,37 @@
+:host{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100dvh;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.login-form{
+    width: 440px;
+}
+
+.login-input{
+    position: relative;
+}
+
+.login-btn{
+    position: absolute;
+    border: none;
+    background: none;
+    top: 50%;
+    right: -270px;
+}
+
+.password-input{
+    position: relative;
+   
+}
+
+.password-btn{
+    position: absolute;
+   border: none;
+   background: none;
+    top: 50%;
+    right: -270px;
+    cursor: pointer;
+}
