@@ -1,0 +1,62 @@
+.profile-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.to-settings-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.to-settings-btn {
+    text-decoration: none;
+    width: 198px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.profile-page__body {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: 1fr 350px;
+
+}
+
+.subscriber-avatar-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    align-items: center;
+    img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+    svg{
+        padding-top: 10px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.subscribers-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    height: min-content;
+}
