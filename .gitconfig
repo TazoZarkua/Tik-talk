@@ -1,0 +1,9 @@
+[user]
+	name = Tazman
+	email = klementizarkua5@gmail.com
+[alias]
+	s = status
+	cm = commit -m
+	co = checkout
+[credential]
+	username = TazoZarkua
