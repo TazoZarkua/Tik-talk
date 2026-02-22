@@ -1,7 +1,7 @@
 @if (profile) {
 <div class="profile-card">
     <div class="avatar-name">
-        <img src="" alt="" class="profile-card__avatar">
+        <img [src]="profile.avatarUrl | imgUrl" alt="" class="profile-card__avatar">
 
         <div class="profile-card__name">
             <strong>{{profile.firstName}} {{profile.lastName}}</strong>
@@ -19,7 +19,7 @@
         }
     </div>
 
-    <div class="profile-card__btns">
+    <div class="profile-card__action-btns">
         <button class="btn">Подписаться</button>
     </div>
 </div>
