@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { ProfilePage } from './pages/profile-page/profile-page';
+import { canActivatAuth } from './auth/access.guard';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,8 @@ export const routes: Routes = [
                 path: 'settings',
                 loadComponent: () => import('./pages/settings-page/settings-page').then(component => component.SettingsPage)
             }
-        ]
+        ],
+        canActivate: [canActivatAuth]
     },
     {
         path: 'login',
