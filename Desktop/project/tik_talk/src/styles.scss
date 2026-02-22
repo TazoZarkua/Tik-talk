@@ -1,0 +1,24 @@
+:root{
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --grey-color: #5F646D;
+    --primary-color: #AE7AFF;
+    --light-transparent-color: #FFFFFFBF;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(/assets/images/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    size: 100dvh;
+    color: var(--light-color);
+    font-family: "JetBrains Mono", monospace;
+}
