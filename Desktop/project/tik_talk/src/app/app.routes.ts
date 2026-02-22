@@ -12,8 +12,8 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/search-page/search-page').then(component => component.SearchPage)
             },
             {
-                path: 'profile/:id',
-                component: ProfilePage
+                path: 'profile',
+                loadComponent: () => import('./pages/profile-page/profile-page').then(component => component.ProfilePage)
             },
             {
                 path: 'settings',

@@ -1,1 +1,9 @@
-<p>profile-page works!</p>
+@if (me(); as me) {
+    <header class="profile-page__header">
+      <app-profile-header [profile]="me"></app-profile-header>
+
+      <button class="btn">Редактировать
+        <svg icon="settings"></svg>
+      </button>
+    </header>
+}

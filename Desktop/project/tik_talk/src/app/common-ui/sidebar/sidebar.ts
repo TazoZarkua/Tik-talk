@@ -22,7 +22,7 @@ export class Sidebar {
 menuItems = [{
   icon: 'home',
   label: 'Моя страница',
-  link: 'profile/me'
+  link: 'profile'
 },
 {
   icon: 'chat',
