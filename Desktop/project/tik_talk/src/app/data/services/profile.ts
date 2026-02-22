@@ -10,14 +10,16 @@ import { tap } from 'rxjs';
 export class Profile {
   http = inject(HttpClient);
   baseApiUrl = `https://icherniakov.ru/yt-course/account/`;
-  
+  me = signal<IProfile | null>(null)
 
   getTestAcconts(){
     return this.http.get<IProfile[]>(`${this.baseApiUrl}test_accounts`)
   }
 
   getMe(){
-    return this.http.get<IProfile>(`${this.baseApiUrl}me`)
+    return this.http.get<IProfile>(`${this.baseApiUrl}me`).pipe(
+      tap(res => this.me.set(res))
+    )
   }
 
   getSubscribersShortList(){

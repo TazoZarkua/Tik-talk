@@ -1,0 +1,130 @@
+:host{
+    display: block;
+    padding: 20px 12px;
+    background: var(--dark-color);
+    height: 100dvh;
+    border-radius: 4px;
+    position: relative;
+}
+
+.main-menu-list{
+    display: grid;
+    grid-gap: 8px;
+    list-style: none;
+}
+
+.menu-item{
+    padding: 16px 12px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 16px 1fr max-content;
+    text-align: left;
+    gap: 12px;
+    align-items: center;
+    border-radius: 2px;
+    transition: background-color 0.10s ease;
+    text-decoration: none;
+
+    #span{
+        color: var(--light-color);
+        transition: color 0.10s ease;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    #svg {
+        width: 16px;
+        height: 16px;
+        color: var(--light-color);
+        transition: color 0.10sa ease;
+    }
+
+    &:hover,
+    &:focus-visible{
+        background-color: var(--dark-hover-color);
+
+        #span {
+            color: var(--primary-color);
+        }
+
+        #svg {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.medium-text{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.to-subscribers-link{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.sidebar__footer{
+    border-radius: 2px;
+    padding: 4px 16px;
+    display: grid;
+    grid-template-columns: 32px 1fr 16px;
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 20px);
+    transition: background-color 0.10s ease;
+    cursor: pointer;
+    grid-gap: 12px;
+    align-items: center;
+
+    .profile-image{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .placeholder{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .username-text{
+        counter-reset: var(--light-color);
+        transition: color 0.10s ease;
+        font-weight: 700;
+    }
+
+    .settings-btn{
+        .to-settings-icon{
+            width: 16px;
+            height: 16px;
+            color: var(--light-color);
+            transition: color 0.10s ease;
+        }
+    }
+
+    &:hover,
+    &:focus-visible{
+        background-color: var(--dark-hover-color);
+
+        .username-text{
+            color: var(--primary-color);
+        }
+        
+        .settings-btn{
+            .to-settings-icon{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
