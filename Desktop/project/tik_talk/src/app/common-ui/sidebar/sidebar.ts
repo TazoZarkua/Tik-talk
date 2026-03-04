@@ -4,11 +4,11 @@ import { SubscriberCard } from "./subscriber-card/subscriber-card";
 import { Profile } from '../../data/services/profile';
 import { AsyncPipe } from '@angular/common';
 import { ImgUrlPipe } from '../../helpers/pipes/img-url-pipe';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SvgIcon, SubscriberCard, AsyncPipe, ImgUrlPipe, RouterLink],
+  imports: [SvgIcon, SubscriberCard, AsyncPipe, ImgUrlPipe, RouterLink, RouterLinkActive],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -32,6 +32,6 @@ menuItems = [{
 {
   icon: 'search',
   label: 'Поиск',
-  link: ''
+  link: 'search'
 }]
 }

@@ -6,9 +6,13 @@ export const routes: Routes = [
     {
         path: '',
         loadComponent: () => import('./common-ui/layout/layout').then(component => component.Layout),
-        children: [
+        children: [{
+            path: '',
+            redirectTo: 'profile',
+            pathMatch: 'full'
+        },
             {
-                path: '',
+                path: 'search',
                 loadComponent: () => import('./pages/search-page/search-page').then(component => component.SearchPage)
             },
             {

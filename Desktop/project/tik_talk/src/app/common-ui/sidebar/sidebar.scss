@@ -43,6 +43,7 @@
         transition: color 0.10sa ease;
     }
 
+    &.active,
     &:hover,
     &:focus-visible{
         background-color: var(--dark-hover-color);
