@@ -1,9 +1,30 @@
 @if (me(); as me) {
-    <header class="profile-page__header">
-      <app-profile-header [profile]="me"></app-profile-header>
+<header class="profile-page__header">
+  <app-profile-header [profile]="me"></app-profile-header>
 
-      <button class="btn">Редактировать
-        <svg icon="settings"></svg>
-      </button>
-    </header>
+  <button class="btn to-settings-btn" [routerLink]="['/settings']">Редактировать
+    <svg icon="settings" class="to-settings-icon"></svg>
+  </button>
+</header>
+<main class="profile-page__body">
+  <app-post-feed></app-post-feed>
+
+  <div>
+    <h3 class="h6 mb16">Подписчики</h3>
+    <div class="subscribers-wrapper mb32">
+      @for (subscriber of subscribers$ | async; track subscriber.id) {
+      <img class="subscriber-img" [src]="subscriber.avatarUrl | imgUrl" alt="subscriber">
+      }
+      <svg class="more" icon="more" [routerLink]="['/search']"></svg>
+    </div>
+    <h3 class="h6 mb16">Навыки</h3>
+    <div class="skills-wrapper mb32">
+      @for (skill of me.stack; track skill) {
+      <div class="skill-tag">{{skill}}</div>
+      }
+    </div>
+    <h3 class="h6">О себе</h3>
+    <p class="medium-text">{{me.description}}</p>
+  </div>
+</main>
 }
